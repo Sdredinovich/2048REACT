@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Sdredinovich/2048REACT/static/css/main.9763f959.css",
+    "main.js": "/Sdredinovich/2048REACT/static/js/main.f138878f.js",
+    "static/js/787.d32f6d68.chunk.js": "/Sdredinovich/2048REACT/static/js/787.d32f6d68.chunk.js",
+    "index.html": "/Sdredinovich/2048REACT/index.html",
+    "main.9763f959.css.map": "/Sdredinovich/2048REACT/static/css/main.9763f959.css.map",
+    "main.f138878f.js.map": "/Sdredinovich/2048REACT/static/js/main.f138878f.js.map",
+    "787.d32f6d68.chunk.js.map": "/Sdredinovich/2048REACT/static/js/787.d32f6d68.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9763f959.css",
+    "static/js/main.f138878f.js"
+  ]
+}
