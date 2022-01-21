@@ -6,21 +6,7 @@ import Header from "./Header/Header";
 
 const Container = (props) => {
 
-const [scoreState, setScoreState] = useState({score:0, record: localStorage.getItem('record')||0})
-useEffect(()=>{
-
-
-  if(scoreState.record>localStorage.getItem('record')){
-    localStorage.setItem('record', scoreState.record)
-  }
-
-
-
-
-
-
-}, [scoreState])
-
+const [scoreState, setScoreState] = useState({score:0, record: 0})
 
 
     

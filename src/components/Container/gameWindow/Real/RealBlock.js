@@ -356,7 +356,7 @@ return true
 
       }
     }
-    props.setScoreState({...props.scoreState, score: globalScore, record: globalScore>props.scoreState.record?globalScore:props.scoreState.record})
+  
     setBlocks({...newBlocks})
     let dirArr = []
     for(let key in newBlocks){
