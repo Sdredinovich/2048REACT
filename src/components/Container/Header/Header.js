@@ -11,12 +11,12 @@ const Header = (props)=>{
 <div className={s.scoreAndRecord}>
 <div className={s.score }>
     <p className={s.title}>СЧЕТ</p>
-    <p>{props.score.score}</p>
+    <p>{props.scoreState.score}</p>
 
 </div>
 <div className={s.record}>
     <p className={s.title}>РЕКОДР</p>
-    <p>{props.score.record}</p>
+    <p>{props.scoreState.record}</p>
 </div>
 </div>
 

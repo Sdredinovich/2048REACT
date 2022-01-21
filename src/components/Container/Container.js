@@ -1,20 +1,33 @@
 import { useState } from "react";
+import { useEffect } from "react/cjs/react.development";
 import s from "./Container.module.css";
 import GameWindow from "./gameWindow/gameWindow";
 import Header from "./Header/Header";
 
 const Container = (props) => {
 
-const [scoreState, secScoreState] = useState({score:0, record:0})
-const [resetFlag, setResetFlag] = useState(false)
+const [scoreState, setScoreState] = useState({score:0, record: localStorage.getItem('record')||0})
+useEffect(()=>{
+
+
+  if(scoreState.record>localStorage.getItem('record')){
+    localStorage.setItem('record', scoreState.record)
+  }
+
+
+
+
+
+
+}, [scoreState])
 
 
 
     
   return (
     <div className={s.container}>
-      <Header  setResetFlag={setResetFlag}  score={scoreState}/>
-      <GameWindow resetFlag={resetFlag} setResetFlag={setResetFlag}  />
+      <Header  scoreState={scoreState}/>
+      <GameWindow  scoreState={scoreState} setScoreState={setScoreState}  />
     </div>
   );
 };

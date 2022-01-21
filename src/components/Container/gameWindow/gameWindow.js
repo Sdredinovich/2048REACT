@@ -9,7 +9,7 @@ const GameWindow = (props) => {
 
   return (
     <div className={s.gameWindow}>
-      <Real/>
+      <Real scoreState={props.scoreState} setScoreState={props.setScoreState}/>
       <Mulaj />
     </div>
   );
