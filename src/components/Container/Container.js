@@ -13,7 +13,7 @@ const [scoreState, setScoreState] = useState({score:0, record: 0})
   return (
     <div className={s.container}>
       <Header  scoreState={scoreState}/>
-      <GameWindow  scoreState={scoreState} setScoreState={setScoreState}  />
+      <GameWindow/>
     </div>
   );
 };
