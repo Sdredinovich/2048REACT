@@ -1,0 +1,615 @@
+@keyframes new {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes gameOver {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: rgba(255, 0, 21, 0.2);
+  }
+}
+@keyframes gameOverBefore {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ==========VVERH */
+@keyframes VV1 {
+  0% {
+    transform: translateY(+120px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes VV1N {
+  0% {
+    transform: translateY(+120px);
+  }
+  50% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+@keyframes VV2 {
+  0% {
+    transform: translateY(+240px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes VV2N {
+  0% {
+    transform: translateY(+240px);
+  }
+  50% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+@keyframes VV3 {
+  0% {
+    transform: translateY(+360px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes VV3N {
+  0% {
+    transform: translateY(+360px);
+  }
+  50% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+/* ============VNIZ */
+@keyframes VN1 {
+  0% {
+    transform: translateY(-120px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes VN1N {
+  0% {
+    transform: translateY(-120px);
+  }
+  50% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+@keyframes VN2 {
+  0% {
+    transform: translateY(-240px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes VN2N {
+  0% {
+    transform: translateY(-240px);
+  }
+  50% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+@keyframes VN3 {
+  0% {
+    transform: translateY(-360px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes VN3N {
+  0% {
+    transform: translateY(-360px);
+  }
+  50% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+
+/*  VLEVO*/
+
+@keyframes VL1 {
+  0% {
+    transform: translateX(+120px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes VL1N {
+  0% {
+    transform: translateX(+120px);
+  }
+  50% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+}
+@keyframes VL2 {
+  0% {
+    transform: translateX(+240px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes VL2N {
+  0% {
+    transform: translateX(+240px);
+  }
+  50% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+}
+@keyframes VL3 {
+  0% {
+    transform: translateX(+360px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes VL3N {
+  0% {
+    transform: translateX(+360px);
+  }
+  50% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+}
+/* ВПРАВО */
+
+@keyframes VP1 {
+  0% {
+    transform: translateX(-120px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes VP1N {
+  0% {
+    transform: translateX(-120px);
+  }
+  50% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+}
+@keyframes VP2 {
+  0% {
+    transform: translateX(-240px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes VP2N {
+  0% {
+    transform: translateX(-240px);
+  }
+  50% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+}
+@keyframes VP3 {
+  0% {
+    transform: translateX(-360px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes VP3N {
+  0% {
+    transform: translateX(-360px);
+  }
+  50% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+}
+
+.real {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 105px;
+  font-weight: bold;
+  width: 105px;
+  border-radius: 5px;
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* 1 ====== */
+.b1-1 {
+  background: red;
+  top: 16px;
+  left: 16px;
+}
+.b1-2 {
+  background: red;
+  top: 16px;
+  left: 137px;
+}
+.b1-3 {
+  background: red;
+  top: 16px;
+  left: 258px;
+}
+.b1-4 {
+  background: red;
+  top: 16px;
+  left: 379px;
+}
+/* 2 ====== */
+.b2-1 {
+  background: red;
+  top: 137px;
+  left: 16px;
+}
+.b2-2 {
+  background: red;
+  top: 137px;
+  left: 137px;
+}
+.b2-3 {
+  background: red;
+  top: 137px;
+  left: 258px;
+}
+.b2-4 {
+  background: red;
+  top: 137px;
+  left: 379px;
+}
+/* 3 ====== */
+.b3-1 {
+  background: red;
+  top: 258px;
+  left: 16px;
+}
+.b3-2 {
+  background: red;
+  top: 258px;
+  left: 137px;
+}
+.b3-3 {
+  background: red;
+  top: 258px;
+  left: 258px;
+}
+.b3-4 {
+  background: red;
+  top: 258px;
+  left: 379px;
+}
+/* 4 ====== */
+.b4-1 {
+  background: red;
+  top: 379px;
+  left: 16px;
+}
+.b4-2 {
+  background: red;
+  top: 379px;
+  left: 137px;
+}
+.b4-3 {
+  background: red;
+  top: 379px;
+  left: 258px;
+}
+.b4-4 {
+  background: red;
+  top: 379px;
+  left: 379px;
+}
+/* ============ */
+.score2 {
+  font-size: 55px;
+  background: #eee4da;
+  color: #776e65;
+}
+.score4 {
+  background: #ede0c8;
+  font-size: 55px;
+  color: #776e65;
+}
+.score8 {
+  background: #f2b179;
+  font-size: 55px;
+  color: #f9f6f2;
+}
+.score16 {
+  background: #f59563;
+  font-size: 45px;
+  color: #f9f6f2;
+}
+.score32 {
+  background: #f67c5f;
+  color: #f9f6f2;
+  font-size: 45px;
+  font-size: 55px;
+}
+.score64 {
+  background: #f65e3b;
+  color: #f9f6f2;
+  font-size: 55px;
+}
+.score128 {
+  background: #edcf72;
+  color: #f9f6f2;
+  font-size: 45px;
+}
+.score256 {
+  background: #edcc61;
+  color: #f9f6f2;
+  font-size: 45px;
+}
+.score512 {
+  background: #edc850;
+  color: #f9f6f2;
+  font-size: 45px;
+}
+.score1024 {
+  background: #edc53f;
+  color: #f9f6f2;
+  font-size: 35px;
+}
+.score2048 {
+  background: #edc22e;
+  color: #f9f6f2;
+  font-size: 35px;
+}
+.score4096 {
+  background: #ddaa05;
+  color: #f9f6f2;
+  font-size: 35px;
+}
+/* =========== */
+.new {
+  animation: new 0.2s;
+}
+
+.pole {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+}
+
+.VV1 {
+  animation: VV1 0.2s;
+}
+.VV1N {
+  animation: VV1N 0.2s;
+}
+
+.VV2 {
+  animation: VV2 0.2s;
+}
+.VV2N {
+  animation: VV2N 0.2s;
+}
+.VV3 {
+  animation: VV3 0.2s;
+}
+.VV3N {
+  animation: VV3N 0.2s;
+}
+
+.VN1 {
+  animation: VN1 0.2s;
+}
+
+.VN1N {
+  animation: VN1N 0.2s;
+}
+
+.VN2 {
+  animation: VN2 0.2s;
+}
+.VN2N {
+  animation: VN2N 0.2s;
+}
+.VN3 {
+  animation: VN3 0.2s;
+}
+.VN3N {
+  animation: VN3N 0.2s;
+}
+
+.VL1 {
+  animation: VL1 0.2s;
+}
+
+.VL1N {
+  animation: VL1N 0.2s;
+}
+
+.VL2 {
+  animation: VL2 0.2s;
+}
+.VL2N {
+  animation: VL2N 0.2s;
+}
+.VL3 {
+  animation: VL3 0.2s;
+}
+.VL3N {
+  animation: VL3N 0.2s;
+}
+
+.VP1 {
+  animation: VP1 0.2s;
+}
+
+.VP1N {
+  animation: VP1N 0.2s;
+}
+
+.VP2 {
+  animation: VP2 0.2s;
+}
+.VP2N {
+  animation: VP2N 0.2s;
+}
+.VP3 {
+  animation: VP3 0.2s;
+}
+.VP3N {
+  animation: VP3N 0.2s;
+}
+
+.gameOver {
+  animation: gameOver forwards 1.5s;
+}
+
+.gameOver::before {
+  animation: gameOverBefore forwards 1.5s;
+  content: "КОНЕЦ ИГРЫ";
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: 220px;
+  left: 150px;
+}

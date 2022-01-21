@@ -1,0 +1,8 @@
+.mulaj {
+  width: 468px;
+  height: 468px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 2px solid red */
+}

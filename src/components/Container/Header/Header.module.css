@@ -1,0 +1,46 @@
+.header {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center
+}
+.h1 {
+  font-size: 74px;
+  margin: 0;
+  color: #776e65;
+font-weight: bold;
+text-decoration: none;
+}
+.scoreAndRecord {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  grid-gap: 5px;
+}
+.score,
+.record {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #bbada0;
+  padding: 0 10px;
+  font-weight: bold;
+  height: 57px;
+}
+
+
+p {
+    color: white;
+    font-size: 25px;
+  padding: 0;
+  margin: 0 0;
+  text-align: center;
+}
+.title{
+    color: #eee4da;
+    font-size: 15px;
+}
+.info{
+}

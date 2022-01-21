@@ -1,0 +1,12 @@
+.gameWindow{
+    position: relative;
+    box-sizing: border-box;
+    width: 500px;
+    height: 500px;
+    margin-top: 30px;
+    background: #bbada0;
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}

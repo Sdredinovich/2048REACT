@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #faf8ef;
+  width: 550px;
+  margin: 0 auto;
+  height: 100vh;
+  border: 5px solid #776e65;
+  border-top: 0;
+  border-bottom: 0;
+}
