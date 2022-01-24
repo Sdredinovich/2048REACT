@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import s from "./Real.module.css";
 
 const Real = (props) => {
-  console.log(props.scoreState);
 
 
   function copyBlock (oldObj){
@@ -65,7 +64,6 @@ return true
 
   const clicked = (direction)=>{
     let newBlocks = copyBlock(blocks)
-    let score = props.scoreState.score
 
     if(direction==38){
 
@@ -79,7 +77,6 @@ return true
           newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-4]:{...newBlocks[key-4], score: newBlocks[key].score, directionClass: 'VV1'} }
            
         }else if(newBlocks[key-4].score&&newBlocks[key-4].score==newBlocks[key].score){
-    score = score + newBlocks[key].score * 2
               
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null, }, [key-4]:{...newBlocks[key-4], score: newBlocks[key].score * 2,plus: true, directionClass: 'VV1N'} } }}
           // Если третья строка
@@ -88,8 +85,6 @@ return true
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-8]:{...newBlocks[key-8], score: newBlocks[key].score, directionClass: 'VV2'} }
               
             } else if(newBlocks[key-8].score&&newBlocks[key-8].score==newBlocks[key].score&&!newBlocks[key-4].score&&!newBlocks[key-8].plus){
-    score = score + newBlocks[key].score * 2
-
             newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-8]:{...newBlocks[key-8], score: newBlocks[key].score * 2, plus: true,directionClass: 'VV2N'} }
             } else if(newBlocks[key-8].score&&newBlocks[key-8].score==newBlocks[key].score&&!newBlocks[key-4].score&&newBlocks[key-8].plus){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-4]:{...newBlocks[key-4], score: newBlocks[key].score, directionClass: 'VV1'}
@@ -98,7 +93,6 @@ return true
             else if(!newBlocks[key-4].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-4]:{...newBlocks[key-4], score: newBlocks[key].score, directionClass: 'VV1'} }}
             else if(newBlocks[key-4].score&&newBlocks[key-4].score==newBlocks[key].score){
-              score = score + newBlocks[key].score * 2
 
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-4]:{...newBlocks[key-4], score: newBlocks[key].score * 2, plus: true, directionClass: 'VV1N'} } }}
           // Если четвертая строка
@@ -106,20 +100,14 @@ return true
             if(!newBlocks[key-4].score&&!newBlocks[key-8].score&&!newBlocks[key-12].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-12]:{...newBlocks[key-12], score: newBlocks[key].score, directionClass: 'VV3'} }}
             else if(newBlocks[key-12].score&&newBlocks[key-12].score==newBlocks[key].score&&!newBlocks[key-4].score&&!newBlocks[key-8].score&&!newBlocks[key-12].plus){
-    score = score + newBlocks[key].score * 2
-
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-12]:{...newBlocks[key-12], score: newBlocks[key].score * 2, plus: true, directionClass: 'VV3N'} }}
               else if(newBlocks[key-12].score&&newBlocks[key-12].score==newBlocks[key].score&&!newBlocks[key-4].score&&!newBlocks[key-8].score&&newBlocks[key-12].plus){
                 newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-8]:{...newBlocks[key-8], score: newBlocks[key].score, directionClass: 'VV2' } }}
                  else if(newBlocks[key-12].score&&newBlocks[key-12].score==newBlocks[key].score&&!newBlocks[key-4].score&&!newBlocks[key-8].score&&!newBlocks[key-12].plus){
-    score = score + newBlocks[key].score * 2
-
                   newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-12]:{...newBlocks[key-12], score: newBlocks[key].score * 2, plus: true, directionClass: 'VV3N'} }}
 
 
                   else if(newBlocks[key-12].score&&newBlocks[key-8].score==newBlocks[key].score&&!newBlocks[key-4].score&&!newBlocks[key-8].plus){
-    score = score + newBlocks[key].score * 2
-
                     newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-8]:{...newBlocks[key-8], score: newBlocks[key].score * 2, plus: true, directionClass: 'VV2N'} }}
                     else if(newBlocks[key-12].score&&newBlocks[key-8].score==newBlocks[key].score&&!newBlocks[key-4].score&&newBlocks[key-8].plus){
                       newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-4]:{...newBlocks[key-4], score: newBlocks[key].score ,  directionClass: 'VV1'} }}
@@ -128,14 +116,10 @@ return true
             else if(!newBlocks[key-4].score&&newBlocks[key-8].score&&newBlocks[key-8].score!==newBlocks[key].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-4]:{...newBlocks[key-4], score: newBlocks[key].score, directionClass: 'VV1'} }}
               else if(!newBlocks[key-4].score&&newBlocks[key-8].score&&newBlocks[key-8].score==newBlocks[key].score){
-    score = score + newBlocks[key].score * 2
-
                 newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-8]:{...newBlocks[key-8], score: newBlocks[key].score * 2, plus: true, directionClass: 'VV2N'} }}
             else if(!newBlocks[key-4].score&&!newBlocks[key-8].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-8]:{...newBlocks[key-8], score: newBlocks[key].score, directionClass: 'VV2'} }}
             else if(newBlocks[key-4].score&&newBlocks[key-4].score==newBlocks[key].score){
-    score = score + newBlocks[key].score * 2
-
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-4]:{...newBlocks[key-4], score: newBlocks[key].score * 2, plus: true, directionClass: 'VV1N'} }}}}
             }
 
@@ -150,7 +134,6 @@ return true
           newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+4]:{...newBlocks[key+4], score: newBlocks[key].score, directionClass: 'VN1'} }
            
         }else if(newBlocks[key+4].score&&newBlocks[key+4].score==newBlocks[key].score){
-    score = score + newBlocks[key].score * 2
               
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null, }, [key+4]:{...newBlocks[key+4], score: newBlocks[key].score * 2,plus: true, directionClass: 'VN1N'} } }}
           // Если вторая строка
@@ -160,8 +143,6 @@ return true
               
             }
              else if(newBlocks[key+8].score&&newBlocks[key+8].score==newBlocks[key].score&&!newBlocks[key+4].score&&!newBlocks[key+8].plus){
-    score = score + newBlocks[key].score * 2
-
             newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+8]:{...newBlocks[key+8], score: newBlocks[key].score * 2,plus: true,directionClass: 'VN2N'} }
             }
              else if(newBlocks[key+8].score&&newBlocks[key+8].score==newBlocks[key].score&&!newBlocks[key+4].score&&newBlocks[key+8].plus){
@@ -169,8 +150,6 @@ return true
               }
             }
             else if(newBlocks[key+8].score&&newBlocks[key+8].score==newBlocks[key].score&&!newBlocks[key+4].score&&!newBlocks[key+8].plus){
-    score = score + newBlocks[key].score * 2
-
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-8]:{...newBlocks[key-8], score: newBlocks[key].score * 2, plus: true,directionClass: 'VN2N'} }
               }
               else if(newBlocks[key+8].score&&newBlocks[key+8].score==newBlocks[key].score&&!newBlocks[key+4].score&&newBlocks[key+8].plus){
@@ -179,7 +158,6 @@ return true
             else if(!newBlocks[key+4].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+4]:{...newBlocks[key+4], score: newBlocks[key].score, directionClass: 'VN1'} }}
             else if(newBlocks[key+4].score&&newBlocks[key+4].score==newBlocks[key].score){
-              score = score + newBlocks[key].score * 2
 
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+4]:{...newBlocks[key+4], score: newBlocks[key].score * 2, plus: true, directionClass: 'VN1N'} } }}
           // Если первая строка
@@ -189,19 +167,13 @@ return true
 
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+12]:{...newBlocks[key+12], score: newBlocks[key].score, directionClass: 'VN3'} }}
             else if(newBlocks[key+12].score&&newBlocks[key+12].score==newBlocks[key].score&&!newBlocks[key+4].score&&!newBlocks[key+8].score&&!newBlocks[key+12].plus){
-    score = score + newBlocks[key].score * 2
-
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+12]:{...newBlocks[key+12], score: newBlocks[key].score * 2, plus: true, directionClass: 'VN3N'} }}
               else if(newBlocks[key+12].score&&newBlocks[key+12].score==newBlocks[key].score&&!newBlocks[key+4].score&&!newBlocks[key+8].score&&newBlocks[key+12].plus){
 
                 newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+8]:{...newBlocks[key+8], score: newBlocks[key].score, directionClass: 'VN2' } }}
                  else if(newBlocks[key+12].score&&newBlocks[key+12].score==newBlocks[key].score&&!newBlocks[key+4].score&&!newBlocks[key+8].score&&!newBlocks[key+12].plus){
-    score = score + newBlocks[key].score * 2
-
                   newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+12]:{...newBlocks[key+12], score: newBlocks[key].score * 2, plus: true, directionClass: 'VN3N'} }}
                   else if(newBlocks[key+8].score&&newBlocks[key+8].score==newBlocks[key].score&&!newBlocks[key+4].score&&!newBlocks[key+8].plus){
-    score = score + newBlocks[key].score * 2
-
                     newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+8]:{...newBlocks[key+8], score: newBlocks[key].score * 2, plus: true, directionClass: 'VN2N'} }
                   }
                   else if(newBlocks[key+8].score&&newBlocks[key+8].score==newBlocks[key].score&&!newBlocks[key+4].score&&newBlocks[key+8].plus){
@@ -212,14 +184,10 @@ return true
             else if(!newBlocks[key+4].score&&newBlocks[key+8].score&&newBlocks[key+8].score!==newBlocks[key].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+4]:{...newBlocks[key+4], score: newBlocks[key].score, directionClass: 'VN1'} }}
               else if(!newBlocks[key+4].score&&newBlocks[key+8].score&&newBlocks[key+8].score==newBlocks[key].score&&!newBlocks[key+8].plus){
-    score = score + newBlocks[key].score * 2
-
                 newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+8]:{...newBlocks[key+8], score: newBlocks[key].score * 2, plus: true, directionClass: 'VN2N'} }}
             else if(!newBlocks[key+4].score&&!newBlocks[key+8].score&&!newBlocks[key+8].plus){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+8]:{...newBlocks[key+8], score: newBlocks[key].score, directionClass: 'VN2'} }}
             else if(newBlocks[key+4].score&&newBlocks[key+4].score==newBlocks[key].score){
-    score = score + newBlocks[key].score * 2
-
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+4]:{...newBlocks[key+4], score: newBlocks[key].score * 2, plus: true, directionClass: 'VN1N'} }}
             
             }}
@@ -237,7 +205,6 @@ return true
           newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-1]:{...newBlocks[key-1], score: newBlocks[key].score, directionClass: 'VL1'} }
            
         }else if(newBlocks[key-1].score&&newBlocks[key-1].score==newBlocks[key].score){
-    score = score + newBlocks[key].score * 2
               
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null, }, [key-1]:{...newBlocks[key-1], score: newBlocks[key].score * 2,plus: true, directionClass: 'VL1N'} } }}
           // Если третий блок
@@ -246,16 +213,12 @@ return true
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-2]:{...newBlocks[key-2], score: newBlocks[key].score, directionClass: 'VL2'} }
               
             } else if(newBlocks[key-2].score&&newBlocks[key-2].score==newBlocks[key].score&&!newBlocks[key-1].score&&!newBlocks[key-2].plus){
-    score = score + newBlocks[key].score * 2
-
             newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-2]:{...newBlocks[key-2], score: newBlocks[key].score * 2, plus: true,directionClass: 'VL2N'} }
             } else if(newBlocks[key-2].score&&newBlocks[key-2].score==newBlocks[key].score&&!newBlocks[key-1].score&&newBlocks[key-2].plus){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-1]:{...newBlocks[key-1], score: newBlocks[key].score, directionClass: 'VL1'}
               }
             }
             else if(newBlocks[key-2].score&&newBlocks[key-2].score==newBlocks[key].score&&!newBlocks[key-1].score&&!newBlocks[key-2].plus){
-    score = score + newBlocks[key].score * 2
-
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-2]:{...newBlocks[key-2], score: newBlocks[key].score * 2, plus: true,directionClass: 'VL2N'} }
               }
               else if(newBlocks[key-2].score&&newBlocks[key-2].score==newBlocks[key].score&&!newBlocks[key-1].score&&newBlocks[key-2].plus){
@@ -264,7 +227,6 @@ return true
             else if(!newBlocks[key-1].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-1]:{...newBlocks[key-1], score: newBlocks[key].score, directionClass: 'VL1'} }}
             else if(newBlocks[key-1].score&&newBlocks[key-1].score==newBlocks[key].score){
-              score = score + newBlocks[key].score * 2
 
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-1]:{...newBlocks[key-1], score: newBlocks[key].score * 2, plus: true, directionClass: 'VL1N'} } }}
           // Если четвертый блок
@@ -272,21 +234,16 @@ return true
             if(!newBlocks[key-1].score&&!newBlocks[key-2].score&&!newBlocks[key-3].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-3]:{...newBlocks[key-3], score: newBlocks[key].score, directionClass: 'VL3'} }}
             else if(newBlocks[key-3].score&&newBlocks[key-3].score==newBlocks[key].score&&!newBlocks[key-1].score&&!newBlocks[key-2].score&&!newBlocks[key-3].plus){
-    score = score + newBlocks[key].score * 2
-
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-3]:{...newBlocks[key-3], score: newBlocks[key].score * 2, plus: true, directionClass: 'VL3N'} }}
               else if(newBlocks[key-3].score&&newBlocks[key-3].score==newBlocks[key].score&&!newBlocks[key-1].score&&!newBlocks[key-2].score&&newBlocks[key-3].plus){
                
                 newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-2]:{...newBlocks[key-2], score: newBlocks[key].score, directionClass: 'VL2' } }}
                  else if(newBlocks[key-3].score&&newBlocks[key-3].score==newBlocks[key].score&&!newBlocks[key-1].score&&!newBlocks[key-2].score&&!newBlocks[key-3].plus){
-                  score =score + newBlocks[key].score * 2
 
                   newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-3]:{...newBlocks[key-3], score: newBlocks[key].score * 2, plus: true, directionClass: 'VL3N'} }}
 
 
                   else if(newBlocks[key-3].score&&newBlocks[key-2].score==newBlocks[key].score&&!newBlocks[key-1].score&&!newBlocks[key-2].plus){
-    score = score + newBlocks[key].score * 2
-
                     newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-2]:{...newBlocks[key-2], score: newBlocks[key].score * 2, plus: true, directionClass: 'VL2N'} }}
                     else if(newBlocks[key-3].score&&newBlocks[key-2].score==newBlocks[key].score&&!newBlocks[key-1].score&&newBlocks[key-2].plus){
                       newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-1]:{...newBlocks[key-1], score: newBlocks[key].score, directionClass: 'VL1'} }}
@@ -294,14 +251,12 @@ return true
             else if(!newBlocks[key-1].score&&newBlocks[key-2].score&&newBlocks[key-2].score!==newBlocks[key].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-1]:{...newBlocks[key-1], score: newBlocks[key].score, directionClass: 'VL1'} }}
               else if(!newBlocks[key-1].score&&newBlocks[key-2].score&&newBlocks[key-2].score==newBlocks[key].score){
-                score = score + newBlocks[key].score * 2
 
                 newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-2]:{...newBlocks[key-2], score: newBlocks[key].score * 2, plus: true, directionClass: 'VL2N'} }}
 
             else if(!newBlocks[key-1].score&&!newBlocks[key-2].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-2]:{...newBlocks[key-2], score: newBlocks[key].score, directionClass: 'VL2'} }}
             else if(newBlocks[key-1].score&&newBlocks[key-1].score==newBlocks[key].score){
-              score = score + newBlocks[key].score * 2
 
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key-1]:{...newBlocks[key-1], score: newBlocks[key].score * 2, plus: true, directionClass: 'VL1N'} }}}}
             }
@@ -317,7 +272,6 @@ return true
           newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+1]:{...newBlocks[key+1], score: newBlocks[key].score, directionClass: 'VP1'} }
            
         }else if(newBlocks[key+1].score&&newBlocks[key+1].score==newBlocks[key].score){
-    score = score + newBlocks[key].score * 2
               
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null, }, [key+1]:{...newBlocks[key+1], score: newBlocks[key].score * 2,plus: true, directionClass: 'VP1N'} } }}
           // Если ВТОРОЙ блок
@@ -326,16 +280,12 @@ return true
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+2]:{...newBlocks[key+2], score: newBlocks[key].score, directionClass: 'VP2'} }
               
             } else if(newBlocks[key+2].score&&newBlocks[key+2].score==newBlocks[key].score&&!newBlocks[key+1].score&&!newBlocks[key+2].plus){
-    score = score + newBlocks[key].score * 2
-
             newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+2]:{...newBlocks[key+2], score: newBlocks[key].score * 2, plus: true,directionClass: 'VP2N'} }
             } else if(newBlocks[key+2].score&&newBlocks[key+2].score==newBlocks[key].score&&!newBlocks[key+1].score&&newBlocks[key+2].plus){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+1]:{...newBlocks[key+1], score: newBlocks[key].score, directionClass: 'VP1'}
               }
             }
             else if(newBlocks[key+2].score&&newBlocks[key+2].score==newBlocks[key].score&&!newBlocks[key+1].score&&!newBlocks[key+2].plus){
-    score = score + newBlocks[key].score * 2
-
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+2]:{...newBlocks[key+2], score: newBlocks[key].score * 2, plus: true,directionClass: 'VP2N'} }
               }
               else if(newBlocks[key+2].score&&newBlocks[key+2].score==newBlocks[key].score&&!newBlocks[key+1].score&&newBlocks[key+2].plus){
@@ -344,7 +294,6 @@ return true
             else if(!newBlocks[key+1].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+1]:{...newBlocks[key+1], score: newBlocks[key].score, directionClass: 'VP1'} }}
             else if(newBlocks[key+1].score&&newBlocks[key+1].score==newBlocks[key].score){
-              score = score + newBlocks[key].score * 2
 
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+1]:{...newBlocks[key+1], score: newBlocks[key].score * 2, plus: true, directionClass: 'VP1N'} } }}
           // Если ПЕРВЫЙ блок
@@ -352,20 +301,14 @@ return true
             if(!newBlocks[key+1].score&&!newBlocks[key+2].score&&!newBlocks[key+3].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+3]:{...newBlocks[key+3], score: newBlocks[key].score, directionClass: 'VP3'} }}
             else if(newBlocks[key+3].score&&newBlocks[key+3].score==newBlocks[key].score&&!newBlocks[key+1].score&&!newBlocks[key+2].score&&!newBlocks[key+3].plus){
-    score = score + newBlocks[key].score * 2
-
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+3]:{...newBlocks[key+3], score: newBlocks[key].score * 2, plus: true, directionClass: 'VP3N'} }}
               else if(newBlocks[key+3].score&&newBlocks[key+3].score==newBlocks[key].score&&!newBlocks[key+1].score&&!newBlocks[key+2].score&&newBlocks[key+3].plus){
                 newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+2]:{...newBlocks[key+2], score: newBlocks[key].score, directionClass: 'VP2' } }}
                  else if(newBlocks[key+3].score&&newBlocks[key+3].score==newBlocks[key].score&&!newBlocks[key+1].score&&!newBlocks[key+2].score&&!newBlocks[key+3].plus){
-    score = score + newBlocks[key].score * 2
-
                   newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+3]:{...newBlocks[key+3], score: newBlocks[key].score * 2, plus: true, directionClass: 'VP3N'} }}
 
 
                   else if(newBlocks[key+3].score&&newBlocks[key+2].score==newBlocks[key].score&&!newBlocks[key+1].score&&!newBlocks[key+2].plus){
-    score = score + newBlocks[key].score * 2
-
                     newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+2]:{...newBlocks[key+2], score: newBlocks[key].score * 2, plus: true, directionClass: 'VP2N'} }}
                     else if(newBlocks[key+3].score&&newBlocks[key+2].score==newBlocks[key].score&&!newBlocks[key+1].score&&newBlocks[key+2].plus){
                       newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+1]:{...newBlocks[key+1], score: newBlocks[key].score , directionClass: 'VP1'} }}
@@ -373,15 +316,11 @@ return true
             else if(!newBlocks[key+1].score&&newBlocks[key+2].score&&newBlocks[key+2].score!==newBlocks[key].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+1]:{...newBlocks[key+1], score: newBlocks[key].score, directionClass: 'VP1'} }}
               else if(!newBlocks[key+1].score&&newBlocks[key+2].score&&newBlocks[key+2].score==newBlocks[key].score){
-    score = score + newBlocks[key].score * 2
-
                 newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+2]:{...newBlocks[key+2], score: newBlocks[key].score * 2, plus: true, directionClass: 'VP2N'} }}
 
             else if(!newBlocks[key+1].score&&!newBlocks[key+2].score){
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+2]:{...newBlocks[key+2], score: newBlocks[key].score, directionClass: 'VP2'} }}
             else if(newBlocks[key+1].score&&newBlocks[key+1].score==newBlocks[key].score){
-    score = score + newBlocks[key].score * 2
-
               newBlocks = {...newBlocks, [key]:{...newBlocks[key], score: null}, [key+1]:{...newBlocks[key+1], score: newBlocks[key].score * 2, plus: true, directionClass: 'VP1N'} }}}}
            
 
@@ -389,9 +328,6 @@ return true
 
       }
     }
-
-   props.setScoreState({record: score>props.scoreState.record?score:props.scoreState.record, score})
-
     setBlocks({...newBlocks})
     let dirArr = []
     for(let key in newBlocks){
