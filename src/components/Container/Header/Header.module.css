@@ -28,6 +28,7 @@ text-decoration: none;
   padding: 0 10px;
   font-weight: bold;
   height: 57px;
+  border: 1px solid black;
 }
 
 
@@ -39,8 +40,55 @@ p {
   text-align: center;
 }
 .title{
-    color: #eee4da;
     font-size: 15px;
 }
 .info{
+}
+.score2 {
+  background: #eee4da;
+  color: #776e65;
+}
+.score4 {
+  background: #ede0c8;
+  color: #776e65;
+}
+.score8 {
+  background: #f2b179;
+  color: #f9f6f2;
+}
+.score16 {
+  background: #f59563;
+  color: #f9f6f2;
+}
+.score32 {
+  background: #f67c5f;
+  color: #f9f6f2;
+}
+.score64 {
+  background: #f65e3b;
+  color: #f9f6f2;
+}
+.score128 {
+  background: #edcf72;
+  color: #f9f6f2;
+}
+.score256 {
+  background: #edcc61;
+  color: #f9f6f2;
+}
+.score512 {
+  background: #edc850;
+  color: #f9f6f2;
+}
+.score1024 {
+  background: #edc53f;
+  color: #f9f6f2;
+}
+.score2048 {
+  background: #edc22e;
+  color: #f9f6f2;
+}
+.score4096 {
+  background: #ddaa05;
+  color: #f9f6f2;
 }

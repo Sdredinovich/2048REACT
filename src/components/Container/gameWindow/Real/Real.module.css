@@ -15,19 +15,14 @@
 @keyframes gameOver {
   0% {
     background-color: transparent;
-  }
-  100% {
-    background-color: rgba(255, 0, 21, 0.2);
-  }
-}
-@keyframes gameOverBefore {
-  0% {
     opacity: 0;
   }
   100% {
+    background-color: rgba(139, 45, 53, 0.607);
     opacity: 1;
   }
 }
+
 /* ==========VVERH */
 @keyframes VV1 {
   0% {
@@ -507,13 +502,7 @@
   animation: new 0.2s;
 }
 
-.pole {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 500px;
-  height: 500px;
-}
+
 
 .VV1 {
   animation: VV1 0.2s;
@@ -600,16 +589,32 @@
 
 .gameOver {
   animation: gameOver forwards 1.5s;
+
 }
 
-.gameOver::before {
-  animation: gameOverBefore forwards 1.5s;
-  content: "КОНЕЦ ИГРЫ";
-  font-size: 30px;
-  font-weight: bold;
-  display: block;
-  text-align: center;
+
+.pole {
+  opacity: 0;
   position: absolute;
-  top: 220px;
-  left: 150px;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center; /* Выравнивает элементы по центру по вертикали */
+  justify-content: center; /* Выравнивает элементы по центру по горизонтали */
 }
+
+.restBtn{
+  background-color: #000000;
+  color: white;
+  font-weight: 700;
+  width: 50%;
+  height: 10%;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  
+}
+
+
