@@ -591,10 +591,10 @@
 
 
 .pole {
-  display: block;
   opacity: 0;
   position: absolute;
   top: 0;
+  display: flex;
   left: 0;
   width: 500px;
   height: 500px;
@@ -615,7 +615,8 @@
 }
 .gameOver {
   animation: gameOver forwards 1.5s;
-  display: flex;
+  width: 500px;
+  height: 500px;
 
 
 }

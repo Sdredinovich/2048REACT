@@ -4,7 +4,7 @@ import GameWindow from "./gameWindow/gameWindow";
 import Header from "./Header/Header";
 
 const Container = (props) => {
-const [scoreState, setScoreState] = useState({score:0, record: localStorage.getItem('record')|0})
+const [scoreState, setScoreState] = useState({score:0, record: localStorage.getItem('record')||0})
 
 function set(score) {
   const record = Math.max(score, localStorage.getItem('record') || 0);

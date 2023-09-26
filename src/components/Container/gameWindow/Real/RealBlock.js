@@ -22,7 +22,7 @@ let initialBlock = {
 
 const Real = ({setScoreState}) => {
   const divRef = useRef(null);
-  const [gameOver, setGameOver] = useState(false)
+  const [gameOver, setGameOver] = useState(true)
 
   const [blocks, setBlocks] = useState(initialBlock)
 
@@ -208,6 +208,8 @@ const Real = ({setScoreState}) => {
   function restart(){
     setBlocks(initialBlock)
     setGameOver(false)
+    divRef.current.focus();
+        
   }
 
 
@@ -226,7 +228,7 @@ const Real = ({setScoreState}) => {
     />
   ))}
   <div className={`${s.pole} ${gameOver && s.gameOver}`} tabIndex="0" >
-    <button className={s.restBtn} onClick={restart}>НАЧАТЬ ЗАНОВО</button>
+    {gameOver&&<button className={s.restBtn} onClick={restart}>НАЧАТЬ ЗАНОВО</button>}
   </div>
 </div>
   );
