@@ -587,20 +587,17 @@
   animation: VP3N 0.2s;
 }
 
-.gameOver {
-  animation: gameOver forwards 1.5s;
 
-}
 
 
 .pole {
+  display: block;
   opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
   width: 500px;
   height: 500px;
-  display: flex;
   align-items: center; /* Выравнивает элементы по центру по вертикали */
   justify-content: center; /* Выравнивает элементы по центру по горизонтали */
 }
@@ -616,5 +613,10 @@
   border-radius: 10px;
   
 }
+.gameOver {
+  animation: gameOver forwards 1.5s;
+  display: flex;
 
+
+}
 
