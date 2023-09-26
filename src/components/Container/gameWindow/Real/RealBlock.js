@@ -22,7 +22,7 @@ let initialBlock = {
 
 const Real = ({setScoreState}) => {
   const divRef = useRef(null);
-  const [gameOver, setGameOver] = useState(true)
+  const [gameOver, setGameOver] = useState(false)
 
   const [blocks, setBlocks] = useState(initialBlock)
 
